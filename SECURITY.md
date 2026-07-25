@@ -28,5 +28,6 @@ submit forms, perform purchases, or intentionally modify the audited site.
 
 ## Reporting a vulnerability
 
-Please open a GitHub security advisory after the public repository is created.
+Use **Report a vulnerability** on the repository's
+[Security page](https://github.com/raywang1025/siteproof/security/advisories/new).
 Avoid putting sensitive reproduction details in a public issue.

@@ -1,0 +1,1601 @@
+{
+  "completedAt": "2026-07-25T08:28:14.243Z",
+  "findings": [
+    {
+      "category": "seo",
+      "element": "head > title",
+      "evidence": null,
+      "heuristics": [],
+      "id": "SP-001",
+      "message": "The document does not provide a non-empty <title>.",
+      "rule": "SEO_TITLE",
+      "severity": "major",
+      "title": "Missing page title",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "seo",
+      "element": "meta[name=\"description\"]",
+      "evidence": null,
+      "heuristics": [],
+      "id": "SP-002",
+      "message": "The page has no non-empty meta description.",
+      "rule": "SEO_DESCRIPTION",
+      "severity": "minor",
+      "title": "Missing meta description",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "element": "html",
+      "evidence": null,
+      "heuristics": [
+        "H2"
+      ],
+      "id": "SP-003",
+      "message": "The root <html> element has no lang attribute.",
+      "rule": "A11Y_LANG",
+      "severity": "minor",
+      "title": "Missing page language",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "structure",
+      "element": "body",
+      "evidence": {
+        "count": 0
+      },
+      "heuristics": [
+        "H4",
+        "H6"
+      ],
+      "id": "SP-004",
+      "message": "Found 0 visible H1 headings; expected one clear page heading.",
+      "rule": "STRUCTURE_H1",
+      "severity": "major",
+      "title": "Missing H1",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "element": "html > body > main > section.hero > img",
+      "evidence": {
+        "src": "http://127.0.0.1:4173/missing-image.jpg"
+      },
+      "heuristics": [],
+      "id": "SP-005",
+      "message": "The image has no alt attribute. Use descriptive text or alt=\"\" for decoration.",
+      "rule": "A11Y_IMAGE_ALT",
+      "severity": "minor",
+      "title": "Image is missing alt",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "element": "html > body > main > form > input",
+      "evidence": null,
+      "heuristics": [
+        "H2",
+        "H9",
+        "H10"
+      ],
+      "id": "SP-006",
+      "message": "The control cannot be identified from visible text or accessible attributes.",
+      "rule": "A11Y_CONTROL_NAME",
+      "severity": "major",
+      "title": "Interactive control has no accessible name",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "ux",
+      "element": "html > body > header > nav > a:nth-of-type(1)",
+      "evidence": {
+        "href": "http://127.0.0.1:4173/#one",
+        "label": "了解更多"
+      },
+      "heuristics": [
+        "H2",
+        "H6"
+      ],
+      "id": "SP-007",
+      "message": "The link label “了解更多” may be unclear outside its visual context.",
+      "rule": "UX_AMBIGUOUS_LINK",
+      "severity": "minor",
+      "title": "Ambiguous link label",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "ux",
+      "element": "html > body > header > nav > a:nth-of-type(2)",
+      "evidence": {
+        "href": "http://127.0.0.1:4173/#two",
+        "label": "了解更多"
+      },
+      "heuristics": [
+        "H2",
+        "H6"
+      ],
+      "id": "SP-008",
+      "message": "The link label “了解更多” may be unclear outside its visual context.",
+      "rule": "UX_AMBIGUOUS_LINK",
+      "severity": "minor",
+      "title": "Ambiguous link label",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "ux",
+      "element": "a[href]",
+      "evidence": {
+        "destinations": [
+          "http://127.0.0.1:4173/#one",
+          "http://127.0.0.1:4173/#two"
+        ],
+        "label": "了解更多"
+      },
+      "heuristics": [
+        "H4",
+        "H6"
+      ],
+      "id": "SP-009",
+      "message": "“了解更多” points to 2 destinations; verify that users can predict each result.",
+      "rule": "UX_LABEL_DESTINATION",
+      "severity": "minor",
+      "title": "Same link label leads to different destinations",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "element": "html > body > header > nav > a:nth-of-type(1)",
+      "evidence": {
+        "background": "rgb(222, 217, 206)",
+        "color": "rgb(171, 165, 154)",
+        "count": 4,
+        "instances": [
+          {
+            "element": "html > body > header > nav > a:nth-of-type(1)",
+            "sample": "了解更多"
+          },
+          {
+            "element": "html > body > header > nav > a:nth-of-type(2)",
+            "sample": "了解更多"
+          },
+          {
+            "element": "html > body > header > nav > button",
+            "sample": "送出"
+          },
+          {
+            "element": "html > body > main > form > button",
+            "sample": "送出"
+          }
+        ],
+        "ratio": 1.74,
+        "threshold": 4.5,
+        "truncated": false
+      },
+      "heuristics": [],
+      "id": "SP-010",
+      "message": "4 text elements share an estimated contrast of 1.74:1, below the 4.5:1 threshold.",
+      "rule": "A11Y_CONTRAST",
+      "severity": "major",
+      "title": "Low text contrast",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "element": "html > body > main > section.hero > h3",
+      "evidence": {
+        "background": "rgb(244, 241, 232)",
+        "color": "rgb(170, 164, 152)",
+        "count": 1,
+        "instances": [
+          {
+            "element": "html > body > main > section.hero > h3",
+            "sample": "這是一個故意做壞的網站"
+          }
+        ],
+        "ratio": 2.19,
+        "threshold": 3,
+        "truncated": false
+      },
+      "heuristics": [],
+      "id": "SP-011",
+      "message": "1 text element share an estimated contrast of 2.19:1, below the 3:1 threshold.",
+      "rule": "A11Y_CONTRAST",
+      "severity": "major",
+      "title": "Low text contrast",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "element": "html > body > main > section.hero > p",
+      "evidence": {
+        "background": "rgb(244, 241, 232)",
+        "color": "rgb(170, 164, 152)",
+        "count": 1,
+        "instances": [
+          {
+            "element": "html > body > main > section.hero > p",
+            "sample": "低對比、固定寬度、錯誤標題層級與不完整表單都用來驗證 SiteProof。"
+          }
+        ],
+        "ratio": 2.19,
+        "threshold": 4.5,
+        "truncated": false
+      },
+      "heuristics": [],
+      "id": "SP-012",
+      "message": "1 text element share an estimated contrast of 2.19:1, below the 4.5:1 threshold.",
+      "rule": "A11Y_CONTRAST",
+      "severity": "major",
+      "title": "Low text contrast",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "ux",
+      "element": "html > body > main > form > input",
+      "evidence": null,
+      "heuristics": [
+        "H5",
+        "H9",
+        "H10"
+      ],
+      "id": "SP-013",
+      "message": "No nearby help or error-message relationship was detected for this required field.",
+      "rule": "UX_REQUIRED_FIELD_GUIDANCE",
+      "severity": "minor",
+      "title": "Required field has no visible guidance",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "responsive",
+      "element": "html > body > header > nav > a:nth-of-type(1)",
+      "evidence": {
+        "count": 5,
+        "instances": [
+          {
+            "element": "html > body > header > nav > a:nth-of-type(1)",
+            "height": 26,
+            "label": "了解更多",
+            "width": 79
+          },
+          {
+            "element": "html > body > header > nav > a:nth-of-type(2)",
+            "height": 26,
+            "label": "了解更多",
+            "width": 79
+          },
+          {
+            "element": "html > body > header > nav > button",
+            "height": 26,
+            "label": "送出",
+            "width": 45
+          },
+          {
+            "element": "html > body > main > form > input",
+            "height": 22,
+            "label": "",
+            "width": 147
+          },
+          {
+            "element": "html > body > main > form > button",
+            "height": 26,
+            "label": "送出",
+            "width": 45
+          }
+        ],
+        "recommendation": "44 × 44 CSS px touch comfort",
+        "truncated": false
+      },
+      "heuristics": [
+        "H7"
+      ],
+      "id": "SP-014",
+      "message": "5 interactive targets are below 44 × 44 CSS px. Treat this as a mobile comfort review, not an automatic launch failure.",
+      "rule": "TOUCH_TARGET_COMFORT",
+      "severity": "observation",
+      "title": "Touch targets are below the comfort recommendation",
+      "viewports": [
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "responsive",
+      "element": "html",
+      "evidence": {
+        "configuredViewportWidth": 390,
+        "documentWidth": 738,
+        "layoutScaleRatio": 1.89,
+        "layoutViewportWidth": 738,
+        "visualViewportScale": 1,
+        "visualViewportWidth": 390
+      },
+      "heuristics": [],
+      "id": "SP-015",
+      "message": "The browser is fitting a 738 CSS px layout into a 390 CSS px device viewport. The page may appear zoomed out instead of responsive.",
+      "rule": "RESPONSIVE_VIEWPORT_SCALE",
+      "severity": "major",
+      "title": "Page layout is wider than the device viewport",
+      "viewports": [
+        "mobile"
+      ]
+    },
+    {
+      "category": "runtime",
+      "element": null,
+      "evidence": {
+        "status": 404,
+        "type": "network",
+        "url": "http://127.0.0.1:4173/missing-image.jpg"
+      },
+      "heuristics": [],
+      "id": "SP-016",
+      "message": "404 Not Found",
+      "rule": "RUNTIME_NETWORK",
+      "severity": "minor",
+      "title": "Resource failed to load",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "runtime",
+      "element": null,
+      "evidence": {
+        "status": null,
+        "type": "console",
+        "url": null
+      },
+      "heuristics": [],
+      "id": "SP-017",
+      "message": "Fixture console error: expected by SiteProof",
+      "rule": "RUNTIME_LOG",
+      "severity": "minor",
+      "title": "Console error",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    {
+      "category": "runtime",
+      "element": null,
+      "evidence": {
+        "status": null,
+        "type": "exception",
+        "url": "http://127.0.0.1:4173/"
+      },
+      "heuristics": [],
+      "id": "SP-018",
+      "message": "Error: Fixture runtime exception: expected by SiteProof\n    at http://127.0.0.1:4173/:76:15",
+      "rule": "RUNTIME_JS",
+      "severity": "major",
+      "title": "JavaScript exception",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    }
+  ],
+  "heuristicReview": [
+    {
+      "automation": "human",
+      "confidence": "unrated",
+      "id": "H1",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "After an important action, can people immediately tell whether the system is working, succeeded, or failed?",
+      "questionZh": "重要操作後，使用者能否立即知道系統正在處理、成功或失敗？",
+      "relatedFindings": [],
+      "status": "needs-human-review",
+      "title": "Visibility of system status",
+      "titleZh": "系統狀態是否清楚"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H2",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Do the words, order, and concepts match the target audience instead of internal terminology?",
+      "questionZh": "文字、順序和概念是否貼近目標使用者，而不是內部術語？",
+      "relatedFindings": [
+        "SP-003",
+        "SP-006",
+        "SP-007",
+        "SP-008"
+      ],
+      "status": "potential-risk",
+      "title": "Match between system and the real world",
+      "titleZh": "是否使用使用者熟悉的語言"
+    },
+    {
+      "automation": "human",
+      "confidence": "unrated",
+      "id": "H3",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Can people cancel, go back, or correct an action without starting over?",
+      "questionZh": "使用者能否取消、返回或修正操作，而不必從頭開始？",
+      "relatedFindings": [],
+      "status": "needs-human-review",
+      "title": "User control and freedom",
+      "titleZh": "使用者是否保有控制權"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H4",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Do equivalent actions use consistent names, appearances, and locations?",
+      "questionZh": "相同操作是否使用一致的名稱、外觀與位置？",
+      "relatedFindings": [
+        "SP-004",
+        "SP-009"
+      ],
+      "status": "potential-risk",
+      "title": "Consistency and standards",
+      "titleZh": "一致性與既有慣例"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H5",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Does the interface use constraints, confirmation, or clear guidance before risky actions?",
+      "questionZh": "介面是否在高風險操作前提供限制、確認或清楚提示？",
+      "relatedFindings": [
+        "SP-013"
+      ],
+      "status": "potential-risk",
+      "title": "Error prevention",
+      "titleZh": "是否預防錯誤"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H6",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Are the information and choices required for the primary task kept visible?",
+      "questionZh": "完成主要任務所需的資訊與選項是否保持可見？",
+      "relatedFindings": [
+        "SP-004",
+        "SP-007",
+        "SP-008",
+        "SP-009"
+      ],
+      "status": "potential-risk",
+      "title": "Recognition rather than recall",
+      "titleZh": "辨識優於記憶"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H7",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Can a first-time visitor understand the interface while experienced users remain efficient?",
+      "questionZh": "新手能否理解，熟練使用者是否也能有效率地完成任務？",
+      "relatedFindings": [
+        "SP-014"
+      ],
+      "status": "potential-risk",
+      "title": "Flexibility and efficiency of use",
+      "titleZh": "彈性與效率"
+    },
+    {
+      "automation": "human",
+      "confidence": "unrated",
+      "id": "H8",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Does secondary information compete with the primary task, message, or action?",
+      "questionZh": "次要資訊是否干擾主要任務、訊息或行動？",
+      "relatedFindings": [],
+      "status": "needs-human-review",
+      "title": "Aesthetic and minimalist design",
+      "titleZh": "內容是否少而有用"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H9",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Do error messages explain the problem, likely cause, and useful next step?",
+      "questionZh": "錯誤訊息是否指出問題、原因以及下一步？",
+      "relatedFindings": [
+        "SP-006",
+        "SP-013"
+      ],
+      "status": "potential-risk",
+      "title": "Recognize, diagnose, and recover from errors",
+      "titleZh": "能否理解並修復錯誤"
+    },
+    {
+      "automation": "assisted",
+      "confidence": "medium",
+      "id": "H10",
+      "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+      "questionEn": "Do unfamiliar or complex actions provide contextual guidance or easy-to-find help?",
+      "questionZh": "複雜或不熟悉的操作是否提供就地說明或容易找到的協助？",
+      "relatedFindings": [
+        "SP-006",
+        "SP-013"
+      ],
+      "status": "potential-risk",
+      "title": "Help and documentation",
+      "titleZh": "是否在需要時提供協助"
+    }
+  ],
+  "heuristicSource": {
+    "disclaimer": "Independent heuristic review. SiteProof is not affiliated with or endorsed by Nielsen Norman Group.",
+    "label": "Jakob Nielsen’s 10 usability heuristics",
+    "url": "https://www.nngroup.com/articles/ten-usability-heuristics/"
+  },
+  "id": "a3dfc9a6-8bc2-4117-aad4-fe98ee39ef3c",
+  "limitations": [
+    "UX heuristics identify potential risks; they do not replace usability testing with real participants.",
+    "Contrast checks are estimates based on computed foreground and ancestor background colors.",
+    "The PoC audits one public page and does not log in, submit forms, or follow task flows."
+  ],
+  "primaryTask": "A first-time visitor can understand what the site offers, find the key information, and identify the primary next step.",
+  "schemaVersion": "0.1.0",
+  "screenshots": {},
+  "startedAt": "2026-07-25T08:28:08.904Z",
+  "summary": {
+    "counts": {
+      "blocker": 0,
+      "major": 8,
+      "minor": 9,
+      "observation": 1
+    },
+    "total": 18,
+    "verdict": "still-needs-work"
+  },
+  "url": "http://127.0.0.1:4173/",
+  "viewportResults": [
+    {
+      "findings": [
+        {
+          "category": "seo",
+          "element": "head > title",
+          "evidence": null,
+          "heuristics": [],
+          "id": "SEO_TITLE-001",
+          "message": "The document does not provide a non-empty <title>.",
+          "rule": "SEO_TITLE",
+          "severity": "major",
+          "title": "Missing page title"
+        },
+        {
+          "category": "seo",
+          "element": "meta[name=\"description\"]",
+          "evidence": null,
+          "heuristics": [],
+          "id": "SEO_DESCRIPTION-002",
+          "message": "The page has no non-empty meta description.",
+          "rule": "SEO_DESCRIPTION",
+          "severity": "minor",
+          "title": "Missing meta description"
+        },
+        {
+          "category": "accessibility",
+          "element": "html",
+          "evidence": null,
+          "heuristics": [
+            "H2"
+          ],
+          "id": "A11Y_LANG-003",
+          "message": "The root <html> element has no lang attribute.",
+          "rule": "A11Y_LANG",
+          "severity": "minor",
+          "title": "Missing page language"
+        },
+        {
+          "category": "structure",
+          "element": "body",
+          "evidence": {
+            "count": 0
+          },
+          "heuristics": [
+            "H4",
+            "H6"
+          ],
+          "id": "STRUCTURE_H1-004",
+          "message": "Found 0 visible H1 headings; expected one clear page heading.",
+          "rule": "STRUCTURE_H1",
+          "severity": "major",
+          "title": "Missing H1"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > img",
+          "evidence": {
+            "src": "http://127.0.0.1:4173/missing-image.jpg"
+          },
+          "heuristics": [],
+          "id": "A11Y_IMAGE_ALT-005",
+          "message": "The image has no alt attribute. Use descriptive text or alt=\"\" for decoration.",
+          "rule": "A11Y_IMAGE_ALT",
+          "severity": "minor",
+          "title": "Image is missing alt"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > form > input",
+          "evidence": null,
+          "heuristics": [
+            "H2",
+            "H9",
+            "H10"
+          ],
+          "id": "A11Y_CONTROL_NAME-006",
+          "message": "The control cannot be identified from visible text or accessible attributes.",
+          "rule": "A11Y_CONTROL_NAME",
+          "severity": "major",
+          "title": "Interactive control has no accessible name"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "href": "http://127.0.0.1:4173/#one",
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H2",
+            "H6"
+          ],
+          "id": "UX_AMBIGUOUS_LINK-007",
+          "message": "The link label “了解更多” may be unclear outside its visual context.",
+          "rule": "UX_AMBIGUOUS_LINK",
+          "severity": "minor",
+          "title": "Ambiguous link label"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > header > nav > a:nth-of-type(2)",
+          "evidence": {
+            "href": "http://127.0.0.1:4173/#two",
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H2",
+            "H6"
+          ],
+          "id": "UX_AMBIGUOUS_LINK-008",
+          "message": "The link label “了解更多” may be unclear outside its visual context.",
+          "rule": "UX_AMBIGUOUS_LINK",
+          "severity": "minor",
+          "title": "Ambiguous link label"
+        },
+        {
+          "category": "ux",
+          "element": "a[href]",
+          "evidence": {
+            "destinations": [
+              "http://127.0.0.1:4173/#one",
+              "http://127.0.0.1:4173/#two"
+            ],
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H4",
+            "H6"
+          ],
+          "id": "UX_LABEL_DESTINATION-009",
+          "message": "“了解更多” points to 2 destinations; verify that users can predict each result.",
+          "rule": "UX_LABEL_DESTINATION",
+          "severity": "minor",
+          "title": "Same link label leads to different destinations"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "background": "rgb(222, 217, 206)",
+            "color": "rgb(171, 165, 154)",
+            "count": 4,
+            "instances": [
+              {
+                "element": "html > body > header > nav > a:nth-of-type(1)",
+                "sample": "了解更多"
+              },
+              {
+                "element": "html > body > header > nav > a:nth-of-type(2)",
+                "sample": "了解更多"
+              },
+              {
+                "element": "html > body > header > nav > button",
+                "sample": "送出"
+              },
+              {
+                "element": "html > body > main > form > button",
+                "sample": "送出"
+              }
+            ],
+            "ratio": 1.74,
+            "threshold": 4.5,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-010",
+          "message": "4 text elements share an estimated contrast of 1.74:1, below the 4.5:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > h3",
+          "evidence": {
+            "background": "rgb(244, 241, 232)",
+            "color": "rgb(170, 164, 152)",
+            "count": 1,
+            "instances": [
+              {
+                "element": "html > body > main > section.hero > h3",
+                "sample": "這是一個故意做壞的網站"
+              }
+            ],
+            "ratio": 2.19,
+            "threshold": 3,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-011",
+          "message": "1 text element share an estimated contrast of 2.19:1, below the 3:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > p",
+          "evidence": {
+            "background": "rgb(244, 241, 232)",
+            "color": "rgb(170, 164, 152)",
+            "count": 1,
+            "instances": [
+              {
+                "element": "html > body > main > section.hero > p",
+                "sample": "低對比、固定寬度、錯誤標題層級與不完整表單都用來驗證 SiteProof。"
+              }
+            ],
+            "ratio": 2.19,
+            "threshold": 4.5,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-012",
+          "message": "1 text element share an estimated contrast of 2.19:1, below the 4.5:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > main > form > input",
+          "evidence": null,
+          "heuristics": [
+            "H5",
+            "H9",
+            "H10"
+          ],
+          "id": "UX_REQUIRED_FIELD_GUIDANCE-013",
+          "message": "No nearby help or error-message relationship was detected for this required field.",
+          "rule": "UX_REQUIRED_FIELD_GUIDANCE",
+          "severity": "minor",
+          "title": "Required field has no visible guidance"
+        }
+      ],
+      "inventory": {
+        "forms": 1,
+        "headings": 1,
+        "images": 2,
+        "interactiveControls": 5,
+        "landmarks": {
+          "main": 1,
+          "navigation": 1
+        },
+        "links": 2,
+        "requiredFields": 1
+      },
+      "page": {
+        "configuredViewportWidth": 1440,
+        "description": "",
+        "documentHeight": 900,
+        "documentWidth": 1440,
+        "lang": "",
+        "title": "",
+        "url": "http://127.0.0.1:4173/",
+        "viewportHeight": 900,
+        "viewportWidth": 1440,
+        "visualViewportScale": 1,
+        "visualViewportWidth": 1440
+      },
+      "primaryActions": [
+        {
+          "href": "http://127.0.0.1:4173/#one",
+          "label": "了解更多",
+          "selector": "html > body > header > nav > a:nth-of-type(1)"
+        },
+        {
+          "href": "http://127.0.0.1:4173/#two",
+          "label": "了解更多",
+          "selector": "html > body > header > nav > a:nth-of-type(2)"
+        },
+        {
+          "href": null,
+          "label": "送出",
+          "selector": "html > body > header > nav > button"
+        },
+        {
+          "href": null,
+          "label": "送出",
+          "selector": "html > body > main > form > button"
+        }
+      ],
+      "viewport": {
+        "deviceScaleFactor": 1,
+        "height": 900,
+        "id": "desktop",
+        "label": "Desktop",
+        "mobile": false,
+        "width": 1440
+      }
+    },
+    {
+      "findings": [
+        {
+          "category": "seo",
+          "element": "head > title",
+          "evidence": null,
+          "heuristics": [],
+          "id": "SEO_TITLE-001",
+          "message": "The document does not provide a non-empty <title>.",
+          "rule": "SEO_TITLE",
+          "severity": "major",
+          "title": "Missing page title"
+        },
+        {
+          "category": "seo",
+          "element": "meta[name=\"description\"]",
+          "evidence": null,
+          "heuristics": [],
+          "id": "SEO_DESCRIPTION-002",
+          "message": "The page has no non-empty meta description.",
+          "rule": "SEO_DESCRIPTION",
+          "severity": "minor",
+          "title": "Missing meta description"
+        },
+        {
+          "category": "accessibility",
+          "element": "html",
+          "evidence": null,
+          "heuristics": [
+            "H2"
+          ],
+          "id": "A11Y_LANG-003",
+          "message": "The root <html> element has no lang attribute.",
+          "rule": "A11Y_LANG",
+          "severity": "minor",
+          "title": "Missing page language"
+        },
+        {
+          "category": "structure",
+          "element": "body",
+          "evidence": {
+            "count": 0
+          },
+          "heuristics": [
+            "H4",
+            "H6"
+          ],
+          "id": "STRUCTURE_H1-004",
+          "message": "Found 0 visible H1 headings; expected one clear page heading.",
+          "rule": "STRUCTURE_H1",
+          "severity": "major",
+          "title": "Missing H1"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > img",
+          "evidence": {
+            "src": "http://127.0.0.1:4173/missing-image.jpg"
+          },
+          "heuristics": [],
+          "id": "A11Y_IMAGE_ALT-005",
+          "message": "The image has no alt attribute. Use descriptive text or alt=\"\" for decoration.",
+          "rule": "A11Y_IMAGE_ALT",
+          "severity": "minor",
+          "title": "Image is missing alt"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > form > input",
+          "evidence": null,
+          "heuristics": [
+            "H2",
+            "H9",
+            "H10"
+          ],
+          "id": "A11Y_CONTROL_NAME-006",
+          "message": "The control cannot be identified from visible text or accessible attributes.",
+          "rule": "A11Y_CONTROL_NAME",
+          "severity": "major",
+          "title": "Interactive control has no accessible name"
+        },
+        {
+          "category": "responsive",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "count": 5,
+            "instances": [
+              {
+                "element": "html > body > header > nav > a:nth-of-type(1)",
+                "height": 26,
+                "label": "了解更多",
+                "width": 79
+              },
+              {
+                "element": "html > body > header > nav > a:nth-of-type(2)",
+                "height": 26,
+                "label": "了解更多",
+                "width": 79
+              },
+              {
+                "element": "html > body > header > nav > button",
+                "height": 26,
+                "label": "送出",
+                "width": 45
+              },
+              {
+                "element": "html > body > main > form > input",
+                "height": 22,
+                "label": "",
+                "width": 147
+              },
+              {
+                "element": "html > body > main > form > button",
+                "height": 26,
+                "label": "送出",
+                "width": 45
+              }
+            ],
+            "recommendation": "44 × 44 CSS px touch comfort",
+            "truncated": false
+          },
+          "heuristics": [
+            "H7"
+          ],
+          "id": "TOUCH_TARGET_COMFORT-007",
+          "message": "5 interactive targets are below 44 × 44 CSS px. Treat this as a mobile comfort review, not an automatic launch failure.",
+          "rule": "TOUCH_TARGET_COMFORT",
+          "severity": "observation",
+          "title": "Touch targets are below the comfort recommendation"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "href": "http://127.0.0.1:4173/#one",
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H2",
+            "H6"
+          ],
+          "id": "UX_AMBIGUOUS_LINK-008",
+          "message": "The link label “了解更多” may be unclear outside its visual context.",
+          "rule": "UX_AMBIGUOUS_LINK",
+          "severity": "minor",
+          "title": "Ambiguous link label"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > header > nav > a:nth-of-type(2)",
+          "evidence": {
+            "href": "http://127.0.0.1:4173/#two",
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H2",
+            "H6"
+          ],
+          "id": "UX_AMBIGUOUS_LINK-009",
+          "message": "The link label “了解更多” may be unclear outside its visual context.",
+          "rule": "UX_AMBIGUOUS_LINK",
+          "severity": "minor",
+          "title": "Ambiguous link label"
+        },
+        {
+          "category": "ux",
+          "element": "a[href]",
+          "evidence": {
+            "destinations": [
+              "http://127.0.0.1:4173/#one",
+              "http://127.0.0.1:4173/#two"
+            ],
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H4",
+            "H6"
+          ],
+          "id": "UX_LABEL_DESTINATION-010",
+          "message": "“了解更多” points to 2 destinations; verify that users can predict each result.",
+          "rule": "UX_LABEL_DESTINATION",
+          "severity": "minor",
+          "title": "Same link label leads to different destinations"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "background": "rgb(222, 217, 206)",
+            "color": "rgb(171, 165, 154)",
+            "count": 4,
+            "instances": [
+              {
+                "element": "html > body > header > nav > a:nth-of-type(1)",
+                "sample": "了解更多"
+              },
+              {
+                "element": "html > body > header > nav > a:nth-of-type(2)",
+                "sample": "了解更多"
+              },
+              {
+                "element": "html > body > header > nav > button",
+                "sample": "送出"
+              },
+              {
+                "element": "html > body > main > form > button",
+                "sample": "送出"
+              }
+            ],
+            "ratio": 1.74,
+            "threshold": 4.5,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-011",
+          "message": "4 text elements share an estimated contrast of 1.74:1, below the 4.5:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > h3",
+          "evidence": {
+            "background": "rgb(244, 241, 232)",
+            "color": "rgb(170, 164, 152)",
+            "count": 1,
+            "instances": [
+              {
+                "element": "html > body > main > section.hero > h3",
+                "sample": "這是一個故意做壞的網站"
+              }
+            ],
+            "ratio": 2.19,
+            "threshold": 3,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-012",
+          "message": "1 text element share an estimated contrast of 2.19:1, below the 3:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > p",
+          "evidence": {
+            "background": "rgb(244, 241, 232)",
+            "color": "rgb(170, 164, 152)",
+            "count": 1,
+            "instances": [
+              {
+                "element": "html > body > main > section.hero > p",
+                "sample": "低對比、固定寬度、錯誤標題層級與不完整表單都用來驗證 SiteProof。"
+              }
+            ],
+            "ratio": 2.19,
+            "threshold": 4.5,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-013",
+          "message": "1 text element share an estimated contrast of 2.19:1, below the 4.5:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > main > form > input",
+          "evidence": null,
+          "heuristics": [
+            "H5",
+            "H9",
+            "H10"
+          ],
+          "id": "UX_REQUIRED_FIELD_GUIDANCE-014",
+          "message": "No nearby help or error-message relationship was detected for this required field.",
+          "rule": "UX_REQUIRED_FIELD_GUIDANCE",
+          "severity": "minor",
+          "title": "Required field has no visible guidance"
+        }
+      ],
+      "inventory": {
+        "forms": 1,
+        "headings": 1,
+        "images": 2,
+        "interactiveControls": 5,
+        "landmarks": {
+          "main": 1,
+          "navigation": 1
+        },
+        "links": 2,
+        "requiredFields": 1
+      },
+      "page": {
+        "configuredViewportWidth": 768,
+        "description": "",
+        "documentHeight": 1043,
+        "documentWidth": 782,
+        "lang": "",
+        "title": "",
+        "url": "http://127.0.0.1:4173/",
+        "viewportHeight": 1043,
+        "viewportWidth": 782,
+        "visualViewportScale": 1,
+        "visualViewportWidth": 768
+      },
+      "primaryActions": [
+        {
+          "href": "http://127.0.0.1:4173/#one",
+          "label": "了解更多",
+          "selector": "html > body > header > nav > a:nth-of-type(1)"
+        },
+        {
+          "href": "http://127.0.0.1:4173/#two",
+          "label": "了解更多",
+          "selector": "html > body > header > nav > a:nth-of-type(2)"
+        },
+        {
+          "href": null,
+          "label": "送出",
+          "selector": "html > body > header > nav > button"
+        },
+        {
+          "href": null,
+          "label": "送出",
+          "selector": "html > body > main > form > button"
+        }
+      ],
+      "viewport": {
+        "deviceScaleFactor": 1,
+        "height": 1024,
+        "id": "tablet",
+        "label": "Tablet",
+        "mobile": true,
+        "width": 768
+      }
+    },
+    {
+      "findings": [
+        {
+          "category": "seo",
+          "element": "head > title",
+          "evidence": null,
+          "heuristics": [],
+          "id": "SEO_TITLE-001",
+          "message": "The document does not provide a non-empty <title>.",
+          "rule": "SEO_TITLE",
+          "severity": "major",
+          "title": "Missing page title"
+        },
+        {
+          "category": "seo",
+          "element": "meta[name=\"description\"]",
+          "evidence": null,
+          "heuristics": [],
+          "id": "SEO_DESCRIPTION-002",
+          "message": "The page has no non-empty meta description.",
+          "rule": "SEO_DESCRIPTION",
+          "severity": "minor",
+          "title": "Missing meta description"
+        },
+        {
+          "category": "accessibility",
+          "element": "html",
+          "evidence": null,
+          "heuristics": [
+            "H2"
+          ],
+          "id": "A11Y_LANG-003",
+          "message": "The root <html> element has no lang attribute.",
+          "rule": "A11Y_LANG",
+          "severity": "minor",
+          "title": "Missing page language"
+        },
+        {
+          "category": "structure",
+          "element": "body",
+          "evidence": {
+            "count": 0
+          },
+          "heuristics": [
+            "H4",
+            "H6"
+          ],
+          "id": "STRUCTURE_H1-004",
+          "message": "Found 0 visible H1 headings; expected one clear page heading.",
+          "rule": "STRUCTURE_H1",
+          "severity": "major",
+          "title": "Missing H1"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > img",
+          "evidence": {
+            "src": "http://127.0.0.1:4173/missing-image.jpg"
+          },
+          "heuristics": [],
+          "id": "A11Y_IMAGE_ALT-005",
+          "message": "The image has no alt attribute. Use descriptive text or alt=\"\" for decoration.",
+          "rule": "A11Y_IMAGE_ALT",
+          "severity": "minor",
+          "title": "Image is missing alt"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > form > input",
+          "evidence": null,
+          "heuristics": [
+            "H2",
+            "H9",
+            "H10"
+          ],
+          "id": "A11Y_CONTROL_NAME-006",
+          "message": "The control cannot be identified from visible text or accessible attributes.",
+          "rule": "A11Y_CONTROL_NAME",
+          "severity": "major",
+          "title": "Interactive control has no accessible name"
+        },
+        {
+          "category": "responsive",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "count": 5,
+            "instances": [
+              {
+                "element": "html > body > header > nav > a:nth-of-type(1)",
+                "height": 26,
+                "label": "了解更多",
+                "width": 79
+              },
+              {
+                "element": "html > body > header > nav > a:nth-of-type(2)",
+                "height": 26,
+                "label": "了解更多",
+                "width": 79
+              },
+              {
+                "element": "html > body > header > nav > button",
+                "height": 26,
+                "label": "送出",
+                "width": 45
+              },
+              {
+                "element": "html > body > main > form > input",
+                "height": 22,
+                "label": "",
+                "width": 147
+              },
+              {
+                "element": "html > body > main > form > button",
+                "height": 26,
+                "label": "送出",
+                "width": 45
+              }
+            ],
+            "recommendation": "44 × 44 CSS px touch comfort",
+            "truncated": false
+          },
+          "heuristics": [
+            "H7"
+          ],
+          "id": "TOUCH_TARGET_COMFORT-007",
+          "message": "5 interactive targets are below 44 × 44 CSS px. Treat this as a mobile comfort review, not an automatic launch failure.",
+          "rule": "TOUCH_TARGET_COMFORT",
+          "severity": "observation",
+          "title": "Touch targets are below the comfort recommendation"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "href": "http://127.0.0.1:4173/#one",
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H2",
+            "H6"
+          ],
+          "id": "UX_AMBIGUOUS_LINK-008",
+          "message": "The link label “了解更多” may be unclear outside its visual context.",
+          "rule": "UX_AMBIGUOUS_LINK",
+          "severity": "minor",
+          "title": "Ambiguous link label"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > header > nav > a:nth-of-type(2)",
+          "evidence": {
+            "href": "http://127.0.0.1:4173/#two",
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H2",
+            "H6"
+          ],
+          "id": "UX_AMBIGUOUS_LINK-009",
+          "message": "The link label “了解更多” may be unclear outside its visual context.",
+          "rule": "UX_AMBIGUOUS_LINK",
+          "severity": "minor",
+          "title": "Ambiguous link label"
+        },
+        {
+          "category": "ux",
+          "element": "a[href]",
+          "evidence": {
+            "destinations": [
+              "http://127.0.0.1:4173/#one",
+              "http://127.0.0.1:4173/#two"
+            ],
+            "label": "了解更多"
+          },
+          "heuristics": [
+            "H4",
+            "H6"
+          ],
+          "id": "UX_LABEL_DESTINATION-010",
+          "message": "“了解更多” points to 2 destinations; verify that users can predict each result.",
+          "rule": "UX_LABEL_DESTINATION",
+          "severity": "minor",
+          "title": "Same link label leads to different destinations"
+        },
+        {
+          "category": "responsive",
+          "element": "html",
+          "evidence": {
+            "configuredViewportWidth": 390,
+            "documentWidth": 738,
+            "layoutScaleRatio": 1.89,
+            "layoutViewportWidth": 738,
+            "visualViewportScale": 1,
+            "visualViewportWidth": 390
+          },
+          "heuristics": [],
+          "id": "RESPONSIVE_VIEWPORT_SCALE-011",
+          "message": "The browser is fitting a 738 CSS px layout into a 390 CSS px device viewport. The page may appear zoomed out instead of responsive.",
+          "rule": "RESPONSIVE_VIEWPORT_SCALE",
+          "severity": "major",
+          "title": "Page layout is wider than the device viewport"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > header > nav > a:nth-of-type(1)",
+          "evidence": {
+            "background": "rgb(222, 217, 206)",
+            "color": "rgb(171, 165, 154)",
+            "count": 4,
+            "instances": [
+              {
+                "element": "html > body > header > nav > a:nth-of-type(1)",
+                "sample": "了解更多"
+              },
+              {
+                "element": "html > body > header > nav > a:nth-of-type(2)",
+                "sample": "了解更多"
+              },
+              {
+                "element": "html > body > header > nav > button",
+                "sample": "送出"
+              },
+              {
+                "element": "html > body > main > form > button",
+                "sample": "送出"
+              }
+            ],
+            "ratio": 1.74,
+            "threshold": 4.5,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-012",
+          "message": "4 text elements share an estimated contrast of 1.74:1, below the 4.5:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > h3",
+          "evidence": {
+            "background": "rgb(244, 241, 232)",
+            "color": "rgb(170, 164, 152)",
+            "count": 1,
+            "instances": [
+              {
+                "element": "html > body > main > section.hero > h3",
+                "sample": "這是一個故意做壞的網站"
+              }
+            ],
+            "ratio": 2.19,
+            "threshold": 3,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-013",
+          "message": "1 text element share an estimated contrast of 2.19:1, below the 3:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "accessibility",
+          "element": "html > body > main > section.hero > p",
+          "evidence": {
+            "background": "rgb(244, 241, 232)",
+            "color": "rgb(170, 164, 152)",
+            "count": 1,
+            "instances": [
+              {
+                "element": "html > body > main > section.hero > p",
+                "sample": "低對比、固定寬度、錯誤標題層級與不完整表單都用來驗證 SiteProof。"
+              }
+            ],
+            "ratio": 2.19,
+            "threshold": 4.5,
+            "truncated": false
+          },
+          "heuristics": [],
+          "id": "A11Y_CONTRAST-014",
+          "message": "1 text element share an estimated contrast of 2.19:1, below the 4.5:1 threshold.",
+          "rule": "A11Y_CONTRAST",
+          "severity": "major",
+          "title": "Low text contrast"
+        },
+        {
+          "category": "ux",
+          "element": "html > body > main > form > input",
+          "evidence": null,
+          "heuristics": [
+            "H5",
+            "H9",
+            "H10"
+          ],
+          "id": "UX_REQUIRED_FIELD_GUIDANCE-015",
+          "message": "No nearby help or error-message relationship was detected for this required field.",
+          "rule": "UX_REQUIRED_FIELD_GUIDANCE",
+          "severity": "minor",
+          "title": "Required field has no visible guidance"
+        }
+      ],
+      "inventory": {
+        "forms": 1,
+        "headings": 1,
+        "images": 2,
+        "interactiveControls": 5,
+        "landmarks": {
+          "main": 1,
+          "navigation": 1
+        },
+        "links": 2,
+        "requiredFields": 1
+      },
+      "page": {
+        "configuredViewportWidth": 390,
+        "description": "",
+        "documentHeight": 1597,
+        "documentWidth": 738,
+        "lang": "",
+        "title": "",
+        "url": "http://127.0.0.1:4173/",
+        "viewportHeight": 1597,
+        "viewportWidth": 738,
+        "visualViewportScale": 1,
+        "visualViewportWidth": 390
+      },
+      "primaryActions": [
+        {
+          "href": "http://127.0.0.1:4173/#one",
+          "label": "了解更多",
+          "selector": "html > body > header > nav > a:nth-of-type(1)"
+        },
+        {
+          "href": "http://127.0.0.1:4173/#two",
+          "label": "了解更多",
+          "selector": "html > body > header > nav > a:nth-of-type(2)"
+        },
+        {
+          "href": null,
+          "label": "送出",
+          "selector": "html > body > header > nav > button"
+        },
+        {
+          "href": null,
+          "label": "送出",
+          "selector": "html > body > main > form > button"
+        }
+      ],
+      "viewport": {
+        "deviceScaleFactor": 2,
+        "height": 844,
+        "id": "mobile",
+        "label": "Mobile",
+        "mobile": true,
+        "width": 390
+      }
+    }
+  ]
+}
