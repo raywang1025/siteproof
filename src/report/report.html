@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SiteProof Report</title>
+    <link rel="stylesheet" href="./report.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">SP</span>
+        <span>SiteProof</span>
+      </a>
+      <nav class="actions" aria-label="Report actions">
+        <button id="locale-toggle" class="button button-secondary">中文</button>
+        <button id="copy-prompt" class="button button-secondary">Copy Codex prompt</button>
+        <button id="download-markdown" class="button button-secondary">Download report (.md)</button>
+        <button id="download-json" class="button button-primary">Download JSON</button>
+      </nav>
+    </header>
+
+    <main id="report-root">
+      <section class="loading-state">
+        <p class="kicker">Loading evidence</p>
+        <h1>Building the launch report</h1>
+        <p>SiteProof is loading evidence from three viewports.</p>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./report.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SiteProof</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div class="header-row">
+          <p class="eyebrow">Evidence before confidence</p>
+          <button id="locale-toggle" class="locale-toggle" type="button">中文</button>
+        </div>
+        <h1>SiteProof</h1>
+        <p class="intro" data-i18n="intro">
+          Find what an AI-built website still needs before launch.
+        </p>
+      </header>
+
+      <form id="audit-form">
+        <label for="url" data-i18n="urlLabel">Website URL</label>
+        <input id="url" name="url" type="url" required />
+
+        <label for="primary-task" data-i18n="taskLabel">Primary user task</label>
+        <textarea id="primary-task" name="primaryTask" rows="4"></textarea>
+
+        <button id="start-button" type="submit" data-i18n="start">Start audit</button>
+      </form>
+
+      <section id="status-panel" class="status-panel" aria-live="polite">
+        <div class="status-row">
+          <span id="status-dot" class="status-dot"></span>
+          <strong id="status-title">Ready</strong>
+        </div>
+        <p id="status-message">
+          Open the site you want to check, then start the audit.
+        </p>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <a id="report-link" class="report-link" hidden data-i18n="openReport">
+          Open latest report
+        </a>
+      </section>
+
+      <p class="privacy" data-i18n="privacy">
+        Analysis stays local. SiteProof uses Debugger access for load errors,
+        device emulation, and screenshots.
+      </p>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>

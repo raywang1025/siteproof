@@ -1,0 +1,42 @@
+name: Bug report
+description: Report incorrect evidence, a failed audit, or an Extension problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include private URLs, authentication details, customer data, or full reports from sensitive sites.
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version
+      placeholder: "For example: 150.0.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Audit did not start
+        - Screenshot or viewport
+        - Console or Network evidence
+        - DOM rule false positive
+        - UX heuristic mapping
+        - Report or export
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and reproducible evidence
+    validations:
+      required: true

@@ -1,0 +1,36 @@
+name: Rule proposal
+description: Propose an evidence-backed launch or usability rule.
+title: "[Rule]: "
+labels:
+  - rule
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Primary source
+      description: Link to the standard, research, or official documentation.
+    validations:
+      required: true
+  - type: dropdown
+    id: automation
+    attributes:
+      label: Automation level
+      options:
+        - Automatic
+        - Assisted
+        - Needs human review
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence required
+      description: What must SiteProof observe before reporting this finding?
+    validations:
+      required: true
+  - type: textarea
+    id: false_positive
+    attributes:
+      label: Known exceptions or false positives
+    validations:
+      required: true

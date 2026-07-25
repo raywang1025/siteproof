@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "SiteProof",
+  "version": "0.1.0",
+  "description": "Evidence-first launch checks for AI-built websites.",
+  "permissions": [
+    "activeTab",
+    "debugger",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Audit this site with SiteProof",
+    "default_popup": "src/popup/popup.html"
+  }
+}
