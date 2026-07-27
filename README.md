@@ -18,10 +18,23 @@ produces a report plus a repair prompt for Codex or Claude.
 
 ## From a URL to repair evidence
 
-1. **Open** the public page you want to ship.
-2. **Audit** three independent Chrome viewports with one extension action.
-3. **Review** evidence, export Markdown or JSON, or copy a repair prompt back
-   into Codex or Claude.
+<table>
+  <tr>
+    <td width="34%">
+      <img
+        src="./docs/assets/siteproof-start-audit.jpg"
+        alt="SiteProof extension ready to audit taneverse.com with a primary user task"
+      />
+    </td>
+    <td width="66%">
+      <strong>1. Open</strong> the public page you want to ship.<br /><br />
+      <strong>2. Audit</strong> three independent Chrome viewports with one
+      extension action.<br /><br />
+      <strong>3. Review</strong> evidence, export Markdown or JSON, or copy a
+      repair prompt back into Codex or Claude.
+    </td>
+  </tr>
+</table>
 
 The interface defaults to English for global open-source use. The popup and
 report include a persistent Traditional Chinese switch. Rule IDs, JSON fields,
@@ -47,6 +60,12 @@ SiteProof labels what it can prove:
 - **Confirmed issue** — direct browser or DOM evidence.
 - **Potential UX risk** — evidence mapped to a heuristic.
 - **Needs human review** — cannot be proven without a real task and participant.
+
+![SiteProof findings showing severity, affected element, viewports, and measured evidence](./docs/assets/siteproof-evidence.jpg)
+
+Every deterministic finding keeps the severity, affected element, viewport, and
+measurement together so a developer or coding agent can trace why it was
+reported.
 
 ## Try the PoC
 
